@@ -111,4 +111,28 @@ function drawRightStars(num){
 
 //####################################################################################
 
+function drawCenteredStars(num){
+        
+            var stars = "";
+        
+            for(var i = 0; i < 75; i++){
+                if(i < Math.floor((75 - num) / 2) || i >= Math.floor((75 - num) / 2) + num){
+                    stars += " ";
+                }
+                else{
+                    stars += "*";
+                }
+            }
+        
+            return stars;
+        }
+
+        console.log(drawCenteredStars(25));
+
+        //We set stars to an empty string, then we loop through the numbers from 0 to 75,
+        //adding a star to stars each time, except when i is less than the floor of 75 - num
+        //divided by 2, or when i is greater than or equal to the floor of 75 - num divided by 2
+        //plus num, in which case we add a space to stars
+
+//####################################################################################
 
