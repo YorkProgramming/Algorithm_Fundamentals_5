@@ -136,3 +136,49 @@ function drawCenteredStars(num){
 
 //####################################################################################
 
+//4.
+//Character Art
+
+/* From the above, derive the following that accepts and draws the given characters,
+not just asterisks:
+
+drawLeftChars(num,char)
+
+drawRightChars(num,char)
+
+drawCenteredChars(num,char) */
+
+function drawCharacter(character) {
+    // Define the patterns for each character
+    const patterns = {
+    A:
+        '  A  \n' +
+        ' A A \n' +
+        'AAAAA\n' +
+        'A   A\n' +
+        'A   A\n',
+    B:
+        'BBBB \n' +
+        'B   B\n' +
+        'BBBB \n' +
+        'B   B\n' +
+        'BBBB \n',
+    };
+
+    if (character in patterns) {
+    const pattern = patterns[character];
+    const drawnCharacter = pattern.replace(/A/g, character);
+
+    console.log(drawnCharacter);
+    } else {
+    console.log(`Character "${character}" is not supported.`);
+    }
+}
+
+drawCharacter('B');
+
+//We define the patterns for each character, then we check if the character is in patterns.
+//If it is, we replace all the A's in the pattern with the character and print the result.
+//If it isn't, we print that the character is not supported.
+
+//####################################################################################
